@@ -5,6 +5,8 @@ class Feedback < ApplicationRecord
 
   # Validations
 
+  validates :comments, :presence => true
+
   validates :recipient_id, :presence => true
 
 end
