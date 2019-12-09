@@ -12,6 +12,8 @@ RSpec.describe Feedback, type: :model do
 
     describe "Validations" do
 
+    it { should validate_presence_of(:commentor_id) }
+
     it { should validate_presence_of(:comments) }
 
     it { should validate_presence_of(:recipient_id) }
