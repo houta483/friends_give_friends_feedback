@@ -5,45 +5,31 @@
 
 <hr>
 
-<!-- Form feedback start -->
 <form action="/create_feedback" method="post">
-<!-- Form feedback end -->
 
-  <!-- Label and input for comments start -->
   <div class="form-group">
     <label for="comments">
       Comments
     </label>
 
-    <!-- Input for comments start -->
     <input type="text" id="comments" name="comments" class="form-control">
-    <!-- Input for comments end -->
   </div>
-  <!-- Label and input for comments end -->
 
-  <!-- Label and input for commentor_id start -->
   <div class="form-group">
     <label for="commentor_id">
       Commentor
     </label>
 
-    <!-- Input for commentor_id start -->
     <input type="text" id="commentor_id" name="commentor_id" class="form-control">
-    <!-- Input for commentor_id end -->
   </div>
-  <!-- Label and input for commentor_id end -->
 
-  <!-- Label and input for recipient_id start -->
   <div class="form-group">
     <label for="recipient_id">
       Recipient
     </label>
 
-    <!-- Input for recipient_id start -->
     <%= select_tag(:recipient_id, options_from_collection_for_select(User.all, :id, :email, @feedback.recipient_id), :class => "form-control") %>
-    <!-- Input for recipient_id end -->
   </div>
-  <!-- Label and input for recipient_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create feedback
