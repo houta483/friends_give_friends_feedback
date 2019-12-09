@@ -74,7 +74,11 @@
 
         <!-- Display feedback.recipient_id start -->
         <td>
-          <%= feedback.recipient.email %>
+          <% if feedback.recipient.present? %>
+            <a href="/users/<%= feedback.recipient.id %>">
+              <%= feedback.recipient.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display feedback.recipient_id end -->
 

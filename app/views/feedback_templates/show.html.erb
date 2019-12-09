@@ -52,7 +52,11 @@
       </dt>
       <!-- Display recipient_id start -->
       <dd>
-        <%= @feedback.recipient_id %>
+        <% if @feedback.recipient.present? %>
+          <a href="/users/<%= @feedback.recipient_id %>">
+            <%= @feedback.recipient.email %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display recipient_id end -->
 
